@@ -1,0 +1,28 @@
+th {
+  width: 172px;
+}
+
+table {
+  margin-top: 8px;
+}
+
+td {
+  font-size: large;
+}
+
+.body-div {
+  width: 400px;
+}
+
+.checkbox-element {
+  margin-left: 54px;
+  margin-bottom: 16px;
+}
+
+.center-cell {
+  text-align: center;
+}
+
+.checkbox-label{
+  margin-left: 4px;
+}

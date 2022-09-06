@@ -1,0 +1,38 @@
+{
+    "manifest_version":2,
+    "name": "List.am price converter",
+    "version":"1.0",
+    "description":"Convert prices on list.am website",
+    "icons":{
+        "128":"icons/icon128.png",
+        "48":"icons/icon48.png",
+        "16":"icons/icon16.png"
+    },
+
+    "page_action":{
+        "default_icon":"icons/icon16.png",
+        "default_popup":"popup.html",
+        "default_title":"List.am prices"
+    },
+
+    "background":{
+        "scripts":["background.js"],
+        "persistent":false
+    },
+
+    "content_scripts":[
+        {
+            "matches":["https://www.list.am/*"],
+            "js": ["tools.js","content.js","jquery-3.6.0.min.js"],
+            "css":["content.css"]
+        }
+    ],
+
+    "permissions":[
+        "tabs",
+        "storage",
+        "history"
+    ],
+
+    "content_security_policy": "script-src 'self' https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js; object-src 'self'"
+}
